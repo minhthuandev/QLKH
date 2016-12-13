@@ -104,7 +104,10 @@
     <Compile Include="App_Data\User.cs">
       <DependentUpon>QLKHModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Business\BusinessLogin.cs" />
     <Compile Include="Core\Constants.cs" />
+    <Compile Include="Core\ResponseBase.cs" />
+    <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>

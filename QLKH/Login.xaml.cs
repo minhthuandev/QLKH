@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKH.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,15 @@ namespace QLKH
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            var result = BusinessLogin.Instance.UserLogin(tbxUsername.Text, tbxPassword.Password);
+            if (result.Success)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show(result.Message, result.Caption, result.MessageButton, result.MessageImage);
+            }
         }
     }
 }
